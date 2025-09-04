@@ -202,3 +202,122 @@
     box-shadow: 0 0 20px #0ff, 0 0 40px #f0f;
 }
 
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #222;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+nav a.active {
+  background-color: #444;
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  display: none;
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+section.active {
+  display: block;
+}
+
+/* Team section */
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.member {
+  flex: 1 1 200px;
+  background-color: #333;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Gallery section */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.image-date {
+  display: none;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* Video section */
+.video-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.video-wrapper video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .member {
+    flex: 1 1 100%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .video-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
